@@ -1,0 +1,1 @@
+import {getMessages} from '@/i18n/getMessages';import {Locale} from '@/i18n/config';export default async function Pending({params}:{params:Promise<{locale:Locale}>}){const {locale}=await params;const m=await getMessages(locale);return (<div><h1>{m.pending_title as string}</h1><p>بنبلغك إذا تم اعتماد حسابك.</p></div>);}

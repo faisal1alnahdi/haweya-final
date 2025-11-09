@@ -1,0 +1,1 @@
+import PhoneAuth from '@/components/PhoneAuth';import {Locale} from '@/i18n/config';import {getMessages} from '@/i18n/getMessages';export default async function Login({params}:{params:Promise<{locale:Locale}>}){const {locale}=await params;const m=await getMessages(locale);return (<div><h1>{m.login_title as string}</h1><PhoneAuth locale={locale}/></div>);}

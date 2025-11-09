@@ -1,0 +1,1 @@
+import {getMessages} from '@/i18n/getMessages';import {Locale} from '@/i18n/config';export default async function CategoryChips({locale}:{locale:Locale}){const m=await getMessages(locale);const cats=(m.food_categories as string).split('|').map(s=>s.trim());return (<div>{cats.map((c,i)=>(<span key={i}>{c}</span>))}</div>);}
