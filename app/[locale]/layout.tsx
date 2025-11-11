@@ -7,7 +7,7 @@ import '@/styles/globals.css';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export const metadata: Metadata = {
-  title: 'ÍÇæíÉ | Haweya',
+  title: 'Haweya',
   description: 'B2B Food Supply & Auctions'
 };
 
@@ -15,7 +15,6 @@ export function generateStaticParams() {
   return locales.map((l) => ({locale: l}));
 }
 
-// ? params åäÇ Promise ÚÔÇä Next.js 15
 export default async function LocaleLayout({
   children,
   params
@@ -50,7 +49,7 @@ export default async function LocaleLayout({
             </div>
           </header>
           <main className="container">{children}</main>
-          <footer className="container">© {new Date().getFullYear()} Haweya</footer>
+          <footer className="container">Â© {new Date().getFullYear()} Haweya</footer>
         </NextIntlClientProvider>
       </body>
     </html>
